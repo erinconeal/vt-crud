@@ -1,3 +1,29 @@
-<div ng-repeat="member in members">
-      {{member.}}
-    </div>
+<h1>{{title}}</h1>
+
+<table class="vtgrps">
+    <tr>
+      <th>
+        <button ng-click="sortBy('id')">ID</button>
+        <span class="sortorder" ng-show="propertyName === 'id'" ng-class="{reverse: reverse}"></span>
+      </th>
+      <th>
+        <button ng-click="sortBy('name')">Name</button>
+        <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+      </th>
+      <th>
+        <button ng-click="sortBy('created')">Created</button>
+        <span class="sortorder" ng-show="propertyName === 'created'" ng-class="{reverse: reverse}"></span>
+      </th>
+      <th>
+        Members
+        <span class="sortorder" ng-show="propertyName === 'members'" ng-class="{reverse: reverse}"></span>
+      </th>
+    </tr>
+    <tr ng-repeat="group in groups | orderBy:propertyNaame:reverse">
+      <td>{{group.id}} </td>
+      <td>{{group.name}}</td>
+      <td>{{group.created | date:'fullDate'}}</td>
+      <td><button ui-sref="details({id: group.id})">{{group.name}} Details
+      </button></td>
+    </tr>
+  </table>

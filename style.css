@@ -1,0 +1,31 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.vtgrps {
+	border-collapse: collapse;
+}
+
+.vtgrps th {
+	border-bottom: 1px solid;
+}
+.vtgrps td,
+.vtgrps th {
+	border-left: 1px solid;
+	padding: 5px 10px;
+}
+.vtgrps td:first-child,
+.vtgrps th:first-child {
+	border-left: none;
+}
+
+.sortorder:after {
+	content: '\25b2';
+}
+.sortorder.reverse:after {
+	content: '\25bc';
+}

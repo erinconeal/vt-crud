@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<h2>Group ID: {{groupData.id}} <br>
+Group Name: {{groupData.name}} <br>
+Group Created: {{groupData.created  | date:'fullDate'}}
+</h2>
+
+<table class="vtgrps" >
+  <tr>
+    <th>ID</th>
+    <th>Kind</th>
+    <th>Added</th>
+  </tr>
+  <tr ng-repeat="data in groupData.members">
+    <td ng-repeat="(key, value) in data">{{value | date:'fullDate'  | nullFilter: 'N/A'}}</td>
+  </tr>
+</table>
+
+<button ui-sref="home">Back to main page</button>
