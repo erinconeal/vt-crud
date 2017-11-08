@@ -2,6 +2,7 @@ angular
 	.module('vtApp')
 	.controller('detailsCtrl', function($scope, $stateParams, item) {
 		$scope.title = 'Details';
+
 		var groupId = $stateParams.id;
 		var info = item.data;
 
