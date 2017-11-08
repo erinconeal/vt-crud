@@ -1,5 +1,5 @@
 angular
-	.module('vtApp', ['ui.router'])
+	.module('vtApp', ['ui.router', 'angular.filter'])
 	.config(function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/');
 

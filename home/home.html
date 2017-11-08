@@ -19,7 +19,7 @@
         <span class="sortorder" ng-show="propertyName === 'members'" ng-class="{reverse: reverse}"></span>
       </th>
     </tr>
-    <tr ng-repeat="group in groups | orderBy:propertyNaame:reverse">
+    <tr ng-repeat="group in groups | orderBy:propertyName:reverse">
       <td>{{group.id}} </td>
       <td>{{group.name}}</td>
       <td>{{group.created | date:'fullDate'}}</td>

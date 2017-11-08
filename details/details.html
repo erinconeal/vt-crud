@@ -5,14 +5,14 @@ Group Name: {{groupData.name}} <br>
 Group Created: {{groupData.created  | date:'fullDate'}}
 </h2>
 
-<table class="vtgrps" >
+<table class="vtgrps">
   <tr>
     <th>ID</th>
     <th>Kind</th>
     <th>Added</th>
   </tr>
-  <tr ng-repeat="data in groupData.members">
-    <td ng-repeat="(key, value) in data">{{value | date:'fullDate'  | nullFilter: 'N/A'}}</td>
+  <tr ng-repeat="memberList in groupData.members">
+    <td ng-repeat="value in memberList">{{value | date:'fullDate' | defaults:''}}</td>
   </tr>
 </table>
 
